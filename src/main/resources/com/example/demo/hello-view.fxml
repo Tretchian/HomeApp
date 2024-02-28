@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane fx:id="main_pane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="429.0" prefWidth="600.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
+<Pane fx:id="main_pane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="429.0" prefWidth="600.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
    <children>
       <TabPane prefHeight="429.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
@@ -88,7 +88,7 @@
                            </padding>
                            <children>
                               <Button fx:id="db_update" mnemonicParsing="false" onAction="#db_update_click" text="Обновить" />
-                              <Button disable="true" mnemonicParsing="false" text="Получить" />
+                              <Button fx:id="db_send" mnemonicParsing="false" onAction="#db_send_click" text="Отправить" />
                            </children>
                         </FlowPane>
                      </children></AnchorPane>

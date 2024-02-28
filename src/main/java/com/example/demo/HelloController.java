@@ -1,13 +1,25 @@
 package com.example.demo;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.chart.LineChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.Pane;
 
 public class HelloController {
+    @FXML
+    private TextArea targetHumidity_textArea;
+    @FXML
+    private Label humidity_label;
+    @FXML
+    private TextArea targetTemp_textArea;
+    @FXML
+    private Button db_update;
+    @FXML
+    private Button db_send;
     @FXML
     private LineChart chart;
     @FXML
@@ -31,16 +43,16 @@ public class HelloController {
     @FXML
     private Label  temp_label;
 
-    @FXML
-    private Button db_update;
 
     @FXML
     protected void db_update_click()
     {
-
+        HelloApplication.dBmanager.Ping();
     }
-
-
+    @FXML
+    public void db_send_click(ActionEvent actionEvent) {
+HelloApplication.dBmanager.sendData();
+    }
     @FXML
     protected void bedroom_click(){
         bedroom_toggle.setSelected(bedroom_toggle.isSelected());
@@ -60,5 +72,6 @@ public class HelloController {
         weird_toggle.setSelected(weird_toggle.isSelected());
 
     }
+
 
 }
