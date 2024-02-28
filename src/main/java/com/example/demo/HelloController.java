@@ -2,6 +2,8 @@ package com.example.demo;
 
 import javafx.fxml.FXML;
 import javafx.scene.chart.LineChart;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.Pane;
 
@@ -25,6 +27,19 @@ public class HelloController {
     private ToggleButton canteen_toggle;
     @FXML
     private ToggleButton weird_toggle;
+
+    @FXML
+    private Label  temp_label;
+
+    @FXML
+    private Button db_update;
+
+    @FXML
+    protected void db_update_click()
+    {
+
+    }
+
 
     @FXML
     protected void bedroom_click(){

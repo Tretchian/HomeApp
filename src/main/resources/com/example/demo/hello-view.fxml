@@ -18,7 +18,7 @@
                               <Pane fx:id="atmos_pane" prefHeight="77.0" prefWidth="567.0" style="-fx-background-color: #339999; -fx-background-radius: 20;">
                                  <children>
                                     <Label fx:id="temp_label" layoutX="88.0" layoutY="26.0" prefHeight="26.0" prefWidth="110.0" style="-fx-background-color: #ccffcc; -fx-background-radius: 5;" text=" Температура:" />
-                                    <TextArea fx:id="targetTemp_textArea" layoutX="207.0" layoutY="20.0" prefHeight="15.0" prefWidth="25.0" />
+                                    <TextArea fx:id="targetTemp_textArea" layoutX="207.0" layoutY="20.0" prefHeight="37.0" prefWidth="83.0" />
                                     <Label fx:id="humidity_label" layoutX="327.0" layoutY="26.0" prefHeight="26.0" prefWidth="110.0" style="-fx-background-color: #ccffcc; -fx-background-radius: 5;" text=" Влажность:" />
                                     <TextArea fx:id="targetHumidity_textArea" layoutX="446.0" layoutY="20.0" prefHeight="15.0" prefWidth="25.0" />
                                  </children>
@@ -87,8 +87,8 @@
                               <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                            </padding>
                            <children>
-                              <Button mnemonicParsing="false" text="Отправить" />
-                              <Button mnemonicParsing="false" text="Получить" />
+                              <Button fx:id="db_update" mnemonicParsing="false" onAction="#db_update_click" text="Обновить" />
+                              <Button disable="true" mnemonicParsing="false" text="Получить" />
                            </children>
                         </FlowPane>
                      </children></AnchorPane>
